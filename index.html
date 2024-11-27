@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario y Operaciones</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Empleado</h1>
+        
+        <form id="employeeForm">
+            <label for="employeeName">Nombre del Empleado:</label>
+            <input type="text" id="employeeName" name="employeeName" required><br>
+
+            <label for="salary">Sueldo:</label>
+            <input type="number" id="salary" name="salary" required><br>
+
+            <label for="observations">Observaciones:</label><br>
+            <textarea id="observations" name="observations" rows="4" cols="50" required></textarea><br>
+
+            <button type="submit">Enviar</button>
+            <button type="button" id="clearForm">Limpiar Datos</button>
+        </form>
+
+        <p id="confirmationMessage"></p>
+
+        <div class="table-container">
+            <h2>Operaciones</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="animated">OPERACIÓN</th>
+                        <th class="animated">DESCRIPCIÓN</th>
+                        <th class="animated">BOTONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CALCULO SALARIO</td>
+                        <td>Ingresar el salario y el descuento para calcular el total</td>
+                        <td><button onclick="calculateSalary()">Calcular</button></td>
+                    </tr>
+                    <tr>
+                        <td>Total de puntos</td>
+                        <td>Ingresar 3 puntajes y calcular el total</td>
+                        <td><button onclick="calculateTotalPoints()">Calcular</button></td>
+                    </tr>
+                    <tr>
+                        <td>PORCENTAJE DE PUNTO</td>
+                        <td>Ingresar un puntaje y calcular el 15% del puntaje</td>
+                        <td><button onclick="calculatePercentage()">Calcular</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
